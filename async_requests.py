@@ -13,12 +13,8 @@ async def response() -> str:
     return "packet example abc"
 
 
-async def request_packet() -> str:
-    """Simulates a request for some data that is I/O bound.
-
-    Returns:
-        A confirmation that the data has been received.
-    """
+async def request_packet() -> None:
+    """Simulates a request for some data that is I/O bound."""
 
     packet = await response()
     print(packet)
